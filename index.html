@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+  <script>
+  var elementler = [3, 'a', 'a','a', 'a', 2, 3, 'a', 3, 'a', 2, 4, 9, 3];
+  var mf = 1;
+  var m = 0;
+  var sum;
+
+  for (var i = 0; i < elementler.length; i++) {
+    for (var j = i; j < elementler.length; j++) {
+      if (elementler[i] == elementler[j]) m++;
+      if (mf < m) {
+        mf = m;
+        sum = elementler[i];
+      }
+    }
+    m = 0;
+  }
+  document.write(sum + " ( " + mf + " defe ) ");
+  </script>
+</body>
+</html>
